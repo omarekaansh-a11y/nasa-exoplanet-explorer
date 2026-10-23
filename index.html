@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111111" />
+    <meta name="description" content="Explore exoplanets ranked from real NASA archive measurements." />
+    <title>Exoplanet Explorer | NASA Archive</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#rankings">Skip to the rankings</a>
+    <span id="data-status" class="visually-hidden" aria-live="polite">Connecting to NASA data</span>
+
+    <main id="main">
+      <section class="intro" id="top" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow">NASA ARCHIVE · EXPLORATORY SCREEN</p>
+          <h1 id="page-title"><span>Worlds</span><span>worth a</span><span class="title-accent">closer</span><span class="title-accent">look.</span></h1>
+          <p class="intro-note">Size and starlight. A starting point for discovery.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-grid"></div>
+          <svg class="shape-orbit" viewBox="0 0 500 500">
+            <circle class="orbit orbit-blue" cx="250" cy="250" r="190" />
+            <circle class="orbit orbit-white" cx="250" cy="250" r="145" />
+            <circle class="orbit orbit-amber" cx="250" cy="250" r="95" />
+            <path class="orbit orbit-red" d="M60 250a190 190 0 0 1 190-190" />
+            <path class="orbit orbit-amber-arc" d="M250 60a190 190 0 0 1 190 190" />
+            <path class="shape-cross" d="M250 18v464M18 250h464M86 86l328 328M414 86 86 414" />
+            <rect class="shape-square" x="211" y="211" width="78" height="78" transform="rotate(45 250 250)" />
+            <circle class="shape-dot" cx="60" cy="250" r="11" />
+            <circle class="shape-dot shape-dot-red" cx="250" cy="60" r="11" />
+            <circle class="shape-dot shape-dot-blue" cx="440" cy="250" r="11" />
+          </svg>
+        </div>
+        <a class="scroll-cue" href="#rankings"><span>Explore the shortlist</span><i aria-hidden="true"></i></a>
+      </section>
+
+      <section class="ranking-section" id="rankings" aria-labelledby="ranking-title">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <div><p class="eyebrow">01 / SHORTLIST</p><h2 id="ranking-title">TOP 10 CANDIDATES</h2></div>
+            <div class="earth-reference" role="img" aria-label="Earth reference, rated 10 out of 10">
+              <svg viewBox="0 0 160 160" aria-hidden="true">
+                <defs><clipPath id="earth-globe-clip"><circle cx="80" cy="73" r="43" /></clipPath></defs>
+                <circle class="earth-ring-outer" cx="80" cy="80" r="70" />
+                <circle class="earth-ring-inner" cx="80" cy="80" r="61" />
+                <path class="earth-ring-accent" d="M80 10a70 70 0 0 1 69 58" />
+                <path class="earth-ring-accent earth-ring-blue" d="M11 91a70 70 0 0 0 67 59" />
+                <path class="earth-ring-accent earth-ring-amber" d="M130 126a70 70 0 0 1-22 11" />
+                <circle class="earth-core" cx="80" cy="73" r="43" />
+                <g class="earth-globe-detail" clip-path="url(#earth-globe-clip)">
+                  <path class="earth-land" d="M42 48 53 39l14 3 8 8-4 8-10 2-3 8-8 2-5 10-7-5 2-11-7-6 7-10zm43-9 11 2 6 7 13 2 9 8-4 8-12 1-6 8-9-2-5 7-8-5 3-10-7-7 3-10zm-9 35 9 3 6 10-2 12-7 10-4 12-7-5-3-13-6-8 3-11zm28 8 8 1 5 7-3 9-7 4-6-8z" />
+                  <path class="earth-latitude" d="M32 61q48-25 96 0M31 84q49 23 98 0" />
+                </g>
+              </svg>
+              <span class="earth-score">10<span>/10</span></span>
+              <span class="earth-label">EARTH</span>
+            </div>
+          </div>
+          <div class="chart-heading"><span>RANKED BY EARTH SIMILARITY</span><span>RATING · OUT OF 10</span></div>
+          <div id="ranking-chart" class="ranking-chart" role="list" aria-live="polite">
+            <p class="loading-state">Fetching current measurements from NASA’s Exoplanet Archive…</p>
+          </div>
+          <div class="axis-row" aria-hidden="true"><span></span><div class="axis"><span>0</span><span>5</span><span>10 · EARTH</span></div><span></span></div>
+          <p class="chart-footnote">Higher ratings indicate measurements closer to Earth, not predicted habitability.</p>
+        </div>
+      </section>
+
+      <section class="orbit-section" aria-labelledby="orbit-title">
+        <div class="section-wrap">
+          <div class="section-heading">
+          <div><p class="eyebrow">02 / MEASUREMENTS</p><h2 id="orbit-title">Planet profiles</h2></div>
+          </div>
+          <section class="chart-panel archive-scale-panel" aria-labelledby="archive-scale-title">
+            <div class="archive-scale-heading">
+              <h3 class="chart-panel-title" id="archive-scale-title">00 / Archive scale · all usable records vs screened planets</h3>
+              <span id="archive-scale-count" class="archive-scale-count">Loading archive records</span>
+            </div>
+            <div class="archive-scale-wrap" id="archive-scale-chart">
+              <p class="loading-state">Preparing NASA archive overview…</p>
+            </div>
+            <div class="archive-scale-legend" aria-label="Chart legend"><span><i class="legend-archive" aria-hidden="true"></i>All usable archive planets</span><span><i class="legend-screened" aria-hidden="true"></i>Screened planets</span><span><i class="legend-earth" aria-hidden="true"></i>Earth reference</span></div>
+          </section>
+          <div class="visualization-pair">
+            <section class="chart-panel" aria-labelledby="chart-2d-title">
+              <h3 class="chart-panel-title" id="chart-2d-title">01 / Radius × energy</h3>
+              <div class="scatter-wrap" id="scatter-chart">
+                <p class="loading-state">Preparing measurement chart…</p>
+              </div>
+              <div class="screening-summary" aria-label="Screening scale summary">
+                <div><strong id="summary-screened">—</strong><span>Worlds screened</span></div>
+                <div><strong id="summary-archive">—</strong><span>Usable archive records</span></div>
+                <div><strong id="summary-yield">—</strong><span>Passed current screen</span></div>
+              </div>
+            </section>
+            <section class="chart-panel" aria-labelledby="chart-3d-title">
+              <h3 class="chart-panel-title" id="chart-3d-title">02 / Planet temperature wireframe</h3>
+              <div class="wireframe-toolbar"><button id="wireframe-reset" type="button">Reset view</button></div>
+              <div class="wireframe-wrap" id="wireframe-chart" role="region" tabindex="0" aria-label="Rotatable 3D wireframe of screened planet measurements.">
+                <p class="loading-state">Preparing 3D wireframe…</p>
+              </div>
+              <p class="wireframe-data-key" aria-label="3D plot axes"><span class="axis-key axis-x">X</span><span class="axis-description">Stellar energy</span><span class="axis-key axis-y">Y</span><span class="axis-description">Planet radius</span><span class="axis-key axis-z">Z</span><span class="axis-description">Equilibrium temperature</span></p>
+            </section>
+          </div>
+          <div class="scatter-legend"><span><i class="legend-dot" aria-hidden="true"></i>Screened candidate</span><span><i class="legend-top-ranked" aria-hidden="true"></i>Top 10</span><span><i class="legend-earth" aria-hidden="true"></i>Earth reference</span><span class="scatter-hint">Hover or focus a point to inspect</span></div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="method-note"><strong>How to read this</strong><p>The shortlist preserves the existing screen and its ordering by <code>|log₂(insolation)| + |radius − 1|</code>. The displayed rating is a monotonic presentation of that score, with Earth at 10. It is not a trained habitability model and does not indicate life or surface conditions.</p></div>
+        <div class="source-note"><span id="updated-at">Waiting for data</span><a href="https://exoplanetarchive.ipac.caltech.edu/" target="_blank" rel="noreferrer">NASA Exoplanet Archive <span aria-hidden="true">↗</span></a></div>
+      </footer>
+    </main>
+    <div class="tooltip" id="chart-tooltip" role="status" hidden></div>
+  </body>
+</html>
+
