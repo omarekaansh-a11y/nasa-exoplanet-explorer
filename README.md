@@ -1,4 +1,6 @@
-# Exoplanet Explorer
+# Worlds Worth a Closer Look
+
+**Project name:** Worlds Worth a Closer Look, an Exoplanet Explorer
 
 An interactive, one page research screening tool built around current measurements from NASA's Exoplanet Archive. It compares planet radius and received stellar energy with Earth, ranks a small set of worlds for further investigation, and visualizes both the screened sample and the larger archive context.
 
@@ -118,6 +120,7 @@ The application has no external front end package dependencies. The local Node s
 ```text
 Blueprint-Lab-Website/
 ├── index.html
+├── favicon.svg
 ├── styles.css
 ├── script.js
 ├── server.js
