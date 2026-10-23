@@ -184,6 +184,7 @@ function safeFilePath(urlPath) {
   }
   const publicFiles = new Set([
     "/index.html",
+    "/favicon.svg",
     "/styles.css",
     "/script.js",
     "/assets/blueprint-lines.png",
