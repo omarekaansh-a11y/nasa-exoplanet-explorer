@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rotating orbital mark">
+  <rect width="64" height="64" rx="14" fill="#111111"/>
+  <g fill="none" stroke-linecap="round">
+    <circle cx="32" cy="32" r="24" stroke="#0B3D91" stroke-width="1.5"/>
+    <circle cx="32" cy="32" r="18" stroke="#F7F7F7" stroke-opacity=".62" stroke-width="1"/>
+    <circle cx="32" cy="32" r="11.5" stroke="#E6AE51" stroke-width="1"/>
+    <path d="M8 32a24 24 0 0 1 24-24" stroke="#D92906" stroke-width="2.4"/>
+    <path d="M32 8a24 24 0 0 1 24 24" stroke="#E6AE51" stroke-width="2.2"/>
+    <path d="M32 3v58M3 32h58M11.5 11.5l41 41m0-41-41 41" stroke="#F7F7F7" stroke-opacity=".28" stroke-width=".65"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="24s" repeatCount="indefinite"/>
+    <circle cx="8" cy="32" r="2.8" fill="#E6AE51"/>
+    <circle cx="32" cy="8" r="2.8" fill="#D92906"/>
+    <circle cx="56" cy="32" r="2.8" fill="#0B3D91"/>
+  </g>
+  <rect x="27.2" y="27.2" width="9.6" height="9.6" transform="rotate(45 32 32)" fill="#111111" stroke="#F7F7F7" stroke-width="1"/>
+</svg>
