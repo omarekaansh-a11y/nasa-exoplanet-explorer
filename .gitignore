@@ -1,0 +1,19 @@
+# Local credentials and environment configuration
+.env
+.env.*
+!.env.example
+
+# Local deployment and editor state
+.vercel/
+.vscode/
+.idea/
+
+# Runtime and operating system files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+Thumbs.db
+Desktop.ini
+
